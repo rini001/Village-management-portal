@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 
 import needsRoutes from './routes/needsRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
+
 dotenv.config();
 
 const app = express();
@@ -17,14 +18,17 @@ app.use(express.json());
 // Routes
 app.use('/api/needs', needsRoutes);
 app.use('/api/admin', adminRoutes);
+
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
-    console.log('MongoDB connected');
+    console.log('✅ MongoDB connected');
+    
     const PORT = process.env.PORT || 5000;
     app.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
+      console.log(`🚀 Server running on port ${PORT}`);
     });
   })
-  .catch(err => console.error('MongoDB connection error:', err));
-
+  .catch(err => {
+    console.error('❌ MongoDB connection error:', err);
+  });

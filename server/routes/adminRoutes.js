@@ -7,7 +7,7 @@ const router = express.Router();
 // Hardcoded admin credentials
 const adminUser = {
   username: 'admin',
-  password: '$2b$10$hi1iSZC2qqu8ndMjBNlA0en.JoPi.wDeOgLf/6C99d7A/RSzTwHlW' // hashed 'admin123'
+  password: '$2b$10$hi1iSZC2qqu8ndMjBNlA0en.JoPi.wDeOgLf/6C99d7A/RSzTwHlW' // hashed ''
 };
 
 router.post('/login', async (req, res) => {

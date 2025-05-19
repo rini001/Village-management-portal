@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { postNeed } from '../api/api';
+import { fetchNeeds, postNeed } from '../api/api';
 import type { Need } from '../types';
 
 const NeedForm = () => {
@@ -19,6 +19,7 @@ const NeedForm = () => {
     await postNeed(form);
     alert('Need submitted!');
     setForm({ category: '', description: '', villageName: '', priority: 'Medium' });
+    fetchNeeds()
   };
 
   return (

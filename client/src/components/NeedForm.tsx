@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { fetchNeeds, postNeed } from '../api/api';
+import { postNeed } from '../api/api';
 import type { Need } from '../types';
 
-const NeedForm = () => {
+const NeedForm = ({ onSuccess }: { onSuccess: () => void }) => {
   const [form, setForm] = useState<Need>({
     category: '',
     description: '',
@@ -10,7 +10,7 @@ const NeedForm = () => {
     priority: 'Medium',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement|HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -19,7 +19,7 @@ const NeedForm = () => {
     await postNeed(form);
     alert('Need submitted!');
     setForm({ category: '', description: '', villageName: '', priority: 'Medium' });
-    fetchNeeds()
+    onSuccess(); // Reload the list
   };
 
   return (

@@ -19,12 +19,15 @@ const Admin = () => {
     <div className="min-h-screen bg-gray-100">
       {token ? (
         <>
+        <div className="flex justify-end">
+
           <button
             onClick={handleLogout}
             className="mb-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
           >
             Logout
           </button>
+        </div>
           <AdminDashboard token={token} />
         </>
       ) : (

@@ -30,7 +30,7 @@ const AdminDashboard = ({ token }: Props) => {
 
   return (
     <div className="max-w-5xl mx-auto mt-8 space-y-6 ">
-      <h2 className="text-2xl font-bold text-center">Admin Dashboard</h2>
+      <h2 className="text-2xl font-bold text-center text-white">Admin Dashboard</h2>
       {needs.map((need) => (
         <div key={need._id} className="border p-4 rounded shadow bg-white">
           <p><strong>Category:</strong> {need.category}</p>

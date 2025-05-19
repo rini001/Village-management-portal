@@ -12,7 +12,7 @@ const NeedsList = ({ needs }: { needs: Need[] }) => {
           <p className="text-sm">Status: {need.verificationStatus || 'Not Verified'} / {need.progressStatus || 'Pending'}</p>
         </div>
       ))}
-    </div>
+     </div>
   );
 };
 

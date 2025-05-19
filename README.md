@@ -15,11 +15,11 @@ The **Village Development Portal** is a simple MERN stack web application that e
 - 🔐 **Admin Login**  
   A dedicated admin panel allows the village administrator to securely log in.
 
-- ✅ **Case Review & Validation**  
-  The admin can mark each case as **Valid** or **Invalid** after review.
+- ✅ **Case Review & Verification**  
+  The admin can mark each case as **Verified** or **Not Verified** after review.
 
 - 📊 **Progress Tracking**  
-  For valid cases, the admin can update the **progress status**, and villagers can track it in real time.
+  For verified cases, the admin can update the **progress status**, and villagers can track it in real time.
 
 ---
 

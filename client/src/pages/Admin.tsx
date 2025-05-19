@@ -16,7 +16,7 @@ const Admin = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-tr from-blue-500 to-purple-600">
       {token ? (
         <>
         <div className="flex justify-end">

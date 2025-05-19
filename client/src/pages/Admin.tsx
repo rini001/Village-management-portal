@@ -16,7 +16,7 @@ const Admin = () => {
   };
 
   return (
-    <div className="p-4 min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100">
       {token ? (
         <>
           <button
